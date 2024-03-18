@@ -1,14 +1,16 @@
 import requests
 
-response = requests.get("https://opentdb.com/api.php?amount=10&type=boolean")
+parameters = {
+    "amount": 10,
+    "type": "boolean"
+}
+response = requests.get("https://opentdb.com/api.php?amount=10&type=boolean", params=parameters)
 response.raise_for_status()
 data = response.json()
-print(data)
 question_data = []
-for question, index in enumerate(data, start=0):
-    questions = {data['results'][]}
+for index, questions in enumerate(data['results'], start=0):
     question_data.append(questions)
-print(question_data)
+
 
 
 
