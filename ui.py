@@ -68,6 +68,9 @@ class QuizInterface:
         self.window.after(1000, self.get_next_question)
 
 
+    def starting_screen(self):
+        
+
 
 
 
